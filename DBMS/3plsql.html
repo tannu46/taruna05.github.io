@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>DATA TYPES IN PL/SQL</h1>
+
+           <p><br>In this chapter, we will discuss the Data Types in PL/SQL. The PL/SQL variables, constants and parameters must have a valid data type, which specifies a storage format, constraints, and a valid range of values. We will focus on the SCALAR and the LOB data types in this chapter. The other two data types will be covered in other chapters.<BR></p>
+          
+    <table border="1">
+        <tr>
+            <th>S.No</th>
+            <th>Category &amp; Description</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Scalar<br>Single values with no internal components, such as a NUMBER, DATE, or BOOLEAN.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Large Object (LOB)<br>Pointers to large objects that are stored separately from other data items, such as text, graphic images, video clips, and sound waveforms.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Composite<br>Data items that have internal components that can be accessed individually. For example, collections and records.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Reference<br>Pointers to other data items.</td>
+        </tr>
+    </table>
+<P>PL/SQL Scalar Data Types and Subtypes<BR>
+    PL/SQL Scalar Data Types and Subtypes come under the following categories −<BR>
+    
+    </P>
+        <table border="1">
+            <tr>
+                <th>S.No</th>
+                <th>Date Type &amp; Description</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Numeric<br>Numeric values on which arithmetic operations are performed.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Character<br>Alphanumeric values that represent single characters or strings of characters.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Boolean<br>Logical values on which logical operations are performed.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Datetime<br>Dates and times.</td>
+            </tr>
+        </table>
+    
+    <P>PL/SQL Character Data Types and Subtypes<BR>
+        Following is the detail of PL/SQL pre-defined character data types and their sub-types −<BR></P>
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>PL/SQL Character Data Types</title>
+            </head>
+            <body>
+              <table border="1">
+                <tr>
+                  <th>S.No</th>
+                  <th>Data Type & Description</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>CHAR<br>Fixed-length character string with a maximum size of 32,767 bytes</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>VARCHAR2<br>Variable-length character string with a maximum size of 32,767 bytes</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>RAW<br>Variable-length binary or byte string with a maximum size of 32,767 bytes, not interpreted by PL/SQL</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>NCHAR<br>Fixed-length national character string with a maximum size of 32,767 bytes</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>NVARCHAR2<br>Variable-length national character string with a maximum size of 32,767 bytes</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>LONG<br>Variable-length character string with a maximum size of 32,760 bytes</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>LONG RAW<br>Variable-length binary or byte string with a maximum size of 32,760 bytes, not interpreted by PL/SQL</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>ROWID<br>Physical row identifier, the address of a row in an ordinary table</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>UROWID<br>Universal row identifier (physical, logical, or foreign row identifier)</td>
+                </tr>
+              </table>
+           <P>PL/SQL User-Defined Subtypes<BR>
+            A subtype is a subset of another data type, which is called its base type. A subtype has the same valid operations as its base type, but only a subset of its valid values.<BR>
+            <BR>
+            PL/SQL predefines several subtypes in package STANDARD. For example, PL/SQL predefines the subtypes CHARACTER and INTEGER as follows −<BR>
+            <BR>
+            SUBTYPE CHARACTER IS CHAR; <BR>
+            SUBTYPE INTEGER IS NUMBER(38,0);<BR>
+            You can define and use your own subtypes. <BR>The following program illustrates defining and using a user-defined subtype −<BR>
+            <BR>
+            DECLARE <BR>
+               SUBTYPE name IS char(20);<BR> 
+               SUBTYPE message IS varchar2(100); <BR>
+               salutation name; <BR>
+               greetings message; <BR>
+            BEGIN <BR>
+               salutation := 'Reader '; <BR>
+               greetings := 'Welcome to the World of PL/SQL'; <BR>
+               dbms_output.put_line('Hello ' || salutation || greetings); <BR>
+            END; <BR>
+            / <BR>
+            When the above code is executed at the SQL prompt, it produces the following result −<BR>
+            <BR>
+            Hello Reader Welcome to the World of PL/SQL <BR>
+             <BR>
+            PL/SQL procedure successfully completed. <BR>
+            NULLs in PL/SQL<BR>
+            PL/SQL NULL values represent missing or unknown data and they are not an integer, a character, or any other specific data type. Note that NULL is not the same as an empty data string or the null character value '\0'. A null can be assigned but it cannot be equated with anything, including itself.</P><BR>
+            
+            
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

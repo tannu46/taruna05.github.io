@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+   
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>FILE SYSTEM VS DBMS</h1>
+        <p><br><br>
+            File System Approach<br><br>
+            File based systems were an early attempt to computerize the manual system. It is also called a traditional based approach in which a decentralized approach was taken where each department stored and controlled its own data with the help of a data processing specialist. The main role of a data processing specialist was to create the necessary computer file structures, and also manage the data within structures and design some application programs that create reports based on file data.<br><br>
+            DBMS Approach:<br><br>
+A database approach is a well-organized collection of data that are related in a meaningful way which can be accessed by different users but stored only once in a system. The various operations performed by the DBMS system are: Insertion, deletion, selection, sorting etc.<br><br>
+
+There are the following differences between DBMS and File systems:<br><br>
+ Basis      |	  DBMS Approach    |    	File System Approach
+<br>Meaning:	<br>1.DBMS is a collection of data. In DBMS, the user is not required to write the procedures.<br>	2.The file system is a collection of data. In this system, the user has to write the procedures for managing the database.<br>
+<br>
+Sharing of data:	<br>1.Due to the centralized approach, data sharing is easy.<br>	2.Data is distributed in many files, and it may be of different formats, so it isn't easy to share data.<br><br>
+Data Abstraction:<br>	1.DBMS gives an abstract view of data that hides the details.	<br>2.The file system provides the detail of the data representation and storage of data.<br>
+<br>Security and Protection:	<br>1.DBMS provides a good protection mechanism.<br>	2.It isn't easy to protect a file under the file system.<br>
+<br>Recovery Mechanism:<br>	1.DBMS provides a crash recovery mechanism, i.e., DBMS protects the user from system failure.	<br>2.The file system doesn't have a crash mechanism, i.e., if the system crashes while entering some data, then the content of the file will be lost.<br>
+<br>Manipulation Techniques:	<br>1.DBMS contains a wide variety of sophisticated techniques to store and retrieve the data.	<br>2.The file system can't efficiently store and retrieve the data.<br>
+<br>Concurrency Problems:<br>	1.DBMS takes care of Concurrent access of data using some form of locking.<br>	2.In the File system, concurrent access has many problems like redirecting the file while deleting some information or updating some information.<br>
+<br>Where to use:<br>	1.Database approach used in large systems which interrelate many files.	File system approach used in large systems which interrelate many files.
+Cost:	<br>2.The database system is expensive to design.	The file system approach is cheaper to design.<br>
+<br>Data Redundancy and Inconsistency:<br>	1.Due to the centralization of the database, the problems of data redundancy and inconsistency are controlled.	<br>2.In this, the files and application programs are created by different programmers so that there exists a lot of duplication of data which may lead to inconsistency.<br>
+<br>Structure:	<br>1.The database structure is complex to design.<br>	2.The file system approach has a simple structure.<br><br>
+Flexibility:<br>	1.Changes are often a necessity to the content of the data stored in any system, and these changes are more easily with a database approach.	<br>2.The flexibility of the system is less as compared to the DBMS approach.<br><br>
+Examples:<br>	1.Oracle, SQL Server, Sybase etc.<br>	2.Cobol, C++ etc.
+        </p>
+</body>
+</html>

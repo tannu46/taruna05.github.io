@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>What is an Operator in SQL?<br></h1>
+           <p><br><br>
+            
+            An operator is a reserved word or a character used primarily in an SQL statement's WHERE clause to perform operation(s), such as comparisons and arithmetic operations. These Operators are used to specify conditions in an SQL statement and to serve as conjunctions for multiple conditions in a statement.<br>
+            <br>
+            Arithmetic operators<br>
+            Comparison operators<br>
+            Logical operators<br>
+            Operators used to negate conditions<br><br>
+            SQL Arithmetic Operators<br>
+            Assume 'variable a' holds 10 and 'variable b' holds 20, then −<br>
+<br>
+    <table>
+        <tr>
+            <th>Operator</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>+</td>
+            <td>Addition</td>
+            <td>a + b will give 30</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Subtraction</td>
+            <td>a - b will give -10</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>Multiplication</td>
+            <td>a * b will give 200</td>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td>Division</td>
+            <td>b / a will give 2</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>Modulus</td>
+            <td>b % a will give 0</td>
+        </tr>
+    </table></p><br><br>
+    <p>SQL Comparison Operators<br><br>
+        Assume 'variable a' holds 10 and 'variable b' holds 20, then −<br>
+       
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>=</td>
+                    <td>Checks if the values of two operands are equal or not, if yes then condition becomes true.</td>
+                    <td>(a = b) is not true.</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</td>
+                    <td>(a != b) is true.</td>
+                </tr>
+                <tr>
+                    <td>&lt;&gt;</td>
+                    <td>Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</td>
+                    <td>(a &lt;&gt; b) is true.</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.</td>
+                    <td>(a &gt; b) is not true.</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.</td>
+                    <td>(a &lt; b) is true.</td>
+                </tr>
+                <tr>
+                    <td>&gt;=</td>
+                    <td>Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.</td>
+                    <td>(a &gt;= b) is not true.</td>
+                </tr>
+                <tr>
+                    <td>&lt;=</td>
+                    <td>Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.</td>
+                    <td>(a &lt;= b) is true.</td>
+                </tr>
+                <tr>
+                    <td>!<</td>
+                    <td>Checks if the value of left operand is not less than the value of right operand, if yes then condition becomes true.</td>
+                    <td>(a !&lt; b) is false.</td>
+                </tr>
+                <tr>
+                    <td>!></td>
+                    <td>Checks if the value of left operand is not greater than the value of right operand, if yes then condition becomes true.</td>
+                    <td>(a !&gt; b) is true.</td>
+                </tr>
+            </table></p><br><br>
+            <p>SQL Logical Operators<br><br>
+                Here is a list of all the logical operators available in SQL.<br></p>
+  <table>
+    <tr>
+      <th>Sr.No.</th>
+      <th>Operator &amp; Description</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>ALL<br>The ALL operator is used to compare a value to all values in another value set.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>AND<br>The AND operator allows the existence of multiple conditions in an SQL statement's WHERE clause.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>ANY<br>The ANY operator is used to compare a value to any applicable value in the list as per the condition.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>BETWEEN<br>The BETWEEN operator is used to search for values that are within a set of values, given the minimum value and the maximum value.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>EXISTS<br>The EXISTS operator is used to search for the presence of a row in a specified table that meets a certain criterion.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>IN<br>The IN operator is used to compare a value to a list of literal values that have been specified.</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>LIKE<br>The LIKE operator is used to compare a value to similar values using wildcard operators.</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>NOT<br>The NOT operator reverses the meaning of the logical operator with which it is used. This is a negate operator.</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>OR<br>The OR operator is used to combine multiple conditions in an SQL statement's WHERE clause.</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>IS NULL<br>The NULL operator is used to compare a value with a NULL value.</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>UNIQUE<br>The UNIQUE operator searches every row of a specified table for uniqueness (no duplicates).</td>
+    </tr>
+  </table>
+
+        
+        
+    
+    
+
+
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

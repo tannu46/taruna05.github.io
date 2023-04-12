@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>DROP or DELETE Table</h1>
+           <p><br>The SQL DROP TABLE statement is used to remove a table definition and all the data, indexes, triggers, constraints and permission specifications for that table.<BR>
+<BR>
+            NOTE − You should be very careful while using this command because once a table is deleted then all the information available in that table will also be lost forever.<BR>
+            <BR>
+            Syntax<BR>
+            The basic syntax of this DROP TABLE statement is as follows −<BR>
+            <BR>
+            DROP TABLE table_name;<BR>
+            Example<BR>
+Let us first verify the CUSTOMERS table and then we will delete it from the database as shown below −<BR>
+<BR>
+SQL> DESC CUSTOMERS;<BR>
+
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Null</th>
+            <th>Key</th>
+            <th>Default</th>
+            <th>Extra</th>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>int(11)</td>
+            <td>NO</td>
+            <td>PRI</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>NAME</td>
+            <td>varchar(20)</td>
+            <td>NO</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>AGE</td>
+            <td>int(11)</td>
+            <td>NO</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>ADDRESS</td>
+            <td>char(25)</td>
+            <td>YES</td>
+            <td></td>
+            <td>NULL</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>SALARY</td>
+            <td>decimal(18,2)</td>
+            <td>YES</td>
+            <td></td>
+            <td>NULL</td>
+            <td></td>
+        </tr>
+    </table><BR>
+   <P> 5 rows in set (0.00 sec)<BR>
+This means that the CUSTOMERS table is available in the database, so let us now drop it as shown below.<BR>
+
+SQL> DROP TABLE CUSTOMERS;<BR>
+Query OK, 0 rows affected (0.01 sec)<BR>
+Now, if you would try the DESC command, then you will get the following error −<BR>
+<BR>
+SQL> DESC CUSTOMERS;<BR>
+ERROR 1146 (42S02): Table 'TEST.CUSTOMERS' doesn't exist<BR>
+Here, TEST is the database name which we are using for our examples.<BR>
+<BR>
+</P>
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

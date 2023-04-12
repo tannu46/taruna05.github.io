@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html>
+<title>Program 15 JS</title>
+<script>
+    alert(document.URL)
+</script>
+</html>

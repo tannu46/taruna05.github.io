@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1> Exceptions  </h1>
+
+           <p><br>we will discuss Exceptions in PL/SQL. An exception is an error condition during a program execution. PL/SQL supports programmers to catch such conditions using EXCEPTION block in the program and an appropriate action is taken against the error condition. There are two types of exceptions −<br>
+<br>
+            System-defined exceptions<br>
+            User-defined exceptions<br>
+            Syntax for Exception Handling<br>
+            The general syntax for exception handling is as follows. Here you can list down as many exceptions as you can handle. The default exception will be handled using WHEN others THEN −<br>
+            <br>
+            DECLARE <br>
+               {declarations section} <br>
+            BEGIN <br>
+               {executable command(s)} <br>
+            EXCEPTION <br>
+               {exception handling goes here }<br>
+               WHEN exception1 THEN  <br>
+                  exception1-handling-statements  <br>
+               WHEN exception2  THEN  <br>
+                  exception2-handling-statements  <br>
+               WHEN exception3 THEN  <br>
+                  exception3-handling-statements <br>
+               ........ <br>
+               WHEN others THEN <br>
+                  exception3-handling-statements <br>
+            END;<br>
+            Example<br>
+            Let us write a code to illustrate the concept. We will be using the CUSTOMERS table we had created and used in the previous chapters −<br>
+            <br>
+            DECLARE <br>
+               c_id customers.id%type := 8; <br>
+               c_name customerS.Name%type; <br>
+               c_addr customers.address%type;<br> 
+            BEGIN <br>
+               SELECT  name, address INTO  c_name, c_addr <br>
+               FROM customers <br>
+               WHERE id = c_id;  <br>
+               DBMS_OUTPUT.PUT_LINE ('Name: '||  c_name); <br>
+               DBMS_OUTPUT.PUT_LINE ('Address: ' || c_addr); <br>
+            <br>
+            EXCEPTION <br>
+               WHEN no_data_found THEN<br> 
+                  dbms_output.put_line('No such customer!'); <br>
+               WHEN others THEN 
+                  dbms_output.put_line('Error!'); <br>
+            END; <br>
+            /<br>
+            When the above code is executed at the SQL prompt, it produces the following result −<br>
+            <br>
+            No such customer!  <br>
+            <br>
+            PL/SQL procedure successfully completed. <br>
+            The above program displays the name and address of a customer whose ID is given. Since there is no customer with ID value 8 in our database, the program raises the run-time exception NO_DATA_FOUND, which is captured in the EXCEPTION block.<br>
+            <br>
+            AD<br>
+            Raising Exceptions<br>
+            Exceptions are raised by the database server automatically whenever there is any internal database error, but exceptions can be raised explicitly by the programmer by using the command RAISE. Following is the simple syntax for raising an exception −<br>
+            <br>
+            DECLARE <br>
+               exception_name EXCEPTION; <br>
+            BEGIN <br>
+               IF condition THEN 
+                  RAISE exception_name; <br>
+               END IF;<br>
+            EXCEPTION <br>
+               WHEN exception_name THEN <br>
+               statement; <br>
+            END; <br>
+            You can use the above syntax in raising the Oracle standard exception or any user-defined exception. In the next section, we will give you an example on raising a user-defined exception. You can raise the Oracle standard exceptions in a similar way.<br>
+            <br>
+            User-defined Exceptions<br>
+            PL/SQL allows you to define your own exceptions according to the need of your program. A user-defined exception must be declared and then raised explicitly, using either a RAISE statement or the procedure DBMS_STANDARD.<br>RAISE_APPLICATION_ERROR.<br>
+            <br>
+            The syntax for declaring an exception is <br>
+            <br>
+            DECLARE <br>
+               my-exception EXCEPTION; <br>
+            Example<br>
+            The following example illustrates the concept. This program asks for a customer ID, when the user enters an invalid ID, the exception invalid_id is raised.<br>
+            <br>
+            DECLARE <br>
+               c_id customers.id%type := &cc_id; <br>
+               c_name customerS.Name%type; <br>
+               c_addr customers.address%type;  <br>
+               -- user defined exception <br>
+               ex_invalid_id  EXCEPTION; <br>
+            BEGIN <br>
+               IF c_id <= 0 THEN <br>
+                  RAISE ex_invalid_id; <br>
+               ELSE <br>
+                  SELECT  name, address INTO  c_name, c_addr <br>
+                  FROM customers <br>
+                  WHERE id = c_id;<br>
+                  DBMS_OUTPUT.PUT_LINE ('Name: '||  c_name);  <br>
+                  DBMS_OUTPUT.PUT_LINE ('Address: ' || c_addr); <br>
+               END IF; <br>
+            <br>
+            EXCEPTION <br>
+               WHEN ex_invalid_id THEN <br>
+                  dbms_output.put_line('ID must be greater than zero!'); <br>
+               WHEN no_data_found THEN <br>
+                  dbms_output.put_line('No such customer!'); <br>
+               WHEN others THEN <br>
+                  dbms_output.put_line('Error!');  <br>
+            END; <br>
+            /<br>
+            When the above code is executed at the SQL prompt, it produces the following result −<br>
+            <br>
+            Enter value for cc_id: -6 (let's enter a value -6) <br>
+            old  2: c_id customers.id%type := &cc_id; <br>
+            new  2: c_id customers.id%type := -6; <br>
+            ID must be greater than zero! <br>
+             <br>
+            PL/SQL procedure successfully completed. <br>
+           </p><br>
+           <h1>Pre-defined Exceptions</h1><p><br>
+            PL/SQL provides many pre-defined exceptions, which are executed when any database rule is violated by a program. For example, the predefined exception NO_DATA_FOUND is raised when a SELECT INTO statement returns no rows. The following table lists few of the important pre-defined exceptions −<br></p>
+            <table>
+                <tr>
+                  <th>Exception</th>
+                  <th>Oracle Error</th>
+                  <th>SQLCODE</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>ACCESS_INTO_NULL</td>
+                  <td>06530</td>
+                  <td>-6530</td>
+                  <td>It is raised when a null object is automatically assigned a value.</td>
+                </tr>
+                <tr>
+                  <td>CASE_NOT_FOUND</td>
+                  <td>06592</td>
+                  <td>-6592</td>
+                  <td>It is raised when none of the choices in the WHEN clause of a CASE statement is selected, and there is no ELSE clause.</td>
+                </tr>
+                <tr>
+                  <td>COLLECTION_IS_NULL</td>
+                  <td>06531</td>
+                  <td>-6531</td>
+                  <td>It is raised when a program attempts to apply collection methods other than EXISTS to an uninitialized nested table or varray, or the program attempts to assign values to the elements of an uninitialized nested table or varray.</td>
+                </tr>
+                <tr>
+                  <td>DUP_VAL_ON_INDEX</td>
+                  <td>00001</td>
+                  <td>-1</td>
+                  <td>It is raised when duplicate values are attempted to be stored in a column with unique index.</td>
+                </tr>
+                <tr>
+                  <td>INVALID_CURSOR</td>
+                  <td>01001</td>
+                  <td>-1001</td>
+                  <td>It is raised when attempts are made to make a cursor operation that is not allowed, such as closing an unopened cursor.</td>
+                </tr>
+                <tr>
+                  <td>INVALID_NUMBER</td>
+                  <td>01722</td>
+                  <td>-1722</td>
+                  <td>It is raised when the conversion of a character string into a number fails because the string does not represent a valid number.</td>
+                </tr>
+                <tr>
+                  <td>LOGIN_DENIED</td>
+                  <td>01017</td>
+                  <td>-1017</td>
+                  <td>It is raised when a program attempts to log on to the database with an invalid username or password.</td>
+                </tr>
+                <tr>
+                  <td>NO_DATA_FOUND</td>
+                  <td>01403</td>
+                  <td>+100</td>
+                  <td>It is raised when a SELECT INTO statement returns no rows.</td>
+                </tr>
+                <tr>
+                  <td>NOT_LOGGED_ON</td>
+                  <td>01012</td>
+                  <td>-1012</td>
+                  <td>It is raised when a database call is issued without being connected to the database.</td>
+                </tr>
+                <tr>
+                  <td>PROGRAM_ERROR</td>
+                  <td>06501</td>
+                  <td>-6501</td>
+                  <td>It is raised when PL/SQL has an internal problem.</td>
+                </tr>
+                <tr>
+                  <td>ROWTYPE_MISMATCH</td>
+                  <td>06504</td>
+                  <td>-6504</td>
+                  <td>It is raised when a cursor fetches value in a variable having incompatible data type.</td>
+                </tr>
+                
+                  </tr>
+                  <tr>
+                    <td>TIMEOUT_ON_RESOURCE</td>
+                    <td>00051</td>
+                    <td>-51</td>
+                    <td>It is raised when a timeout occurs while waiting for a resource, such as a lock or a network connection.</td>
+                  </tr>
+                  <tr>
+                    <td>TOO_MANY_ROWS</td>
+                    <td>01422</td>
+                    <td>-1422</td>
+                    <td>It is raised when a SELECT INTO statement returns multiple rows.</td>
+                  </tr>
+                  <tr>
+                    <td>VALUE_ERROR</td>
+                    <td>06502</td>
+                    <td>-6502</td>
+                    <td>It is raised when an arithmetic, conversion, or value constraint error occurs.</td>
+                  </tr>
+                </table>
+                
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

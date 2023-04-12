@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>Cursors</h1>
+
+           <p><br>we will discuss the cursors in PL/SQL. Oracle creates a memory area, known as the context area, for processing an SQL statement, which contains all the information needed for processing the statement; for example, the number of rows processed, etc.<br>
+<br>
+            A cursor is a pointer to this context area. PL/SQL controls the context area through a cursor. A cursor holds the rows (one or more) returned by a SQL statement. The set of rows the cursor holds is referred to as the active set.<br>
+            <br>
+            You can name a cursor so that it could be referred to in a program to fetch and process the rows returned by the SQL statement, one at a time. There are two types of cursors −<br>
+            <br>
+            Implicit cursors<br>
+            Explicit cursors<br>
+            Implicit Cursors<br>
+            Implicit cursors are automatically created by Oracle whenever an SQL statement is executed, when there is no explicit cursor for the statement. Programmers cannot control the implicit cursors and the information in it.<br>
+            <br>
+            Whenever a DML statement (INSERT, UPDATE and DELETE) is issued, an implicit cursor is associated with this statement. For INSERT operations, the cursor holds the data that needs to be inserted. For UPDATE and DELETE operations, the cursor identifies the rows that would be affected.<br>
+            <br>
+            In PL/SQL, you can refer to the most recent implicit cursor as the SQL cursor, which always has attributes such as %FOUND, %ISOPEN, %NOTFOUND, and %ROWCOUNT. The SQL cursor has additional attributes, %BULK_ROWCOUNT and %BULK_EXCEPTIONS, designed for use with the FORALL statement. The following table provides the description of the most used attributes −<br>
+       
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Attribute & Description</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>%FOUND<br>Returns TRUE if an INSERT, UPDATE, or DELETE statement affected one or more rows or a SELECT INTO statement returned one or more rows. Otherwise, it returns FALSE.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>%NOTFOUND<br>The logical opposite of %FOUND. It returns TRUE if an INSERT, UPDATE, or DELETE statement affected no rows, or a SELECT INTO statement returned no rows. Otherwise, it returns FALSE.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>%ISOPEN<br>Always returns FALSE for implicit cursors, because Oracle closes the SQL cursor automatically after executing its associated SQL statement.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>%ROWCOUNT<br>Returns the number of rows affected by an INSERT, UPDATE, or DELETE statement, or returned by a SELECT INTO statement.</td>
+        </tr>
+    </table>
+           </p><p>Any SQL cursor attribute will be accessed as sql%attribute_name as shown below in the example.<br>
+<br>
+            Example<br>
+            We will be using the CUSTOMERS table we had created and used in the previous chapters.<br>
+            <br>
+            Select * from customers; <br> </p>
+       
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>AGE</th>
+                        <th>ADDRESS</th>
+                        <th>SALARY</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Ramesh</td>
+                        <td>32</td>
+                        <td>Ahmedabad</td>
+                        <td>2000.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Khilan</td>
+                        <td>25</td>
+                        <td>Delhi</td>
+                        <td>1500.00</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Kaushik</td>
+                        <td>23</td>
+                        <td>Kota</td>
+                        <td>2000.00</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Chaitali</td>
+                        <td>25</td>
+                        <td>Mumbai</td>
+                        <td>6500.00</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Hardik</td>
+                        <td>27</td>
+                        <td>Bhopal</td>
+                        <td>8500.00</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Komal</td>
+                        <td>22</td>
+                        <td>MP</td>
+                        <td>4500.00</td>
+                    </tr>
+                </table>
+            <p>The following program will update the table and increase the salary of each customer by 500 and use the SQL%ROWCOUNT attribute to determine the number of rows affected −<br>
+<br>
+                DECLARE  <br>
+                   total_rows number(2); <br>
+                BEGIN <br>
+                   UPDATE customers <br>
+                   SET salary = salary + 500; <br>
+                   IF sql%notfound THEN <br>
+                      dbms_output.put_line('no customers selected'); <br>
+                   ELSIF sql%found THEN <br>
+                      total_rows := sql%rowcount;<br>
+                      dbms_output.put_line( total_rows || ' customers selected '); <br>
+                   END IF;  <br>
+                END; <br>
+                /      <br>
+                When the above code is executed at the SQL prompt, it produces the following result −<br>
+                <br>
+                6 customers selected  <br>
+                <br>
+                PL/SQL procedure successfully completed. <br>
+                If you check the records in customers table, you will find that the rows have been updated −<br>
+                <br>
+                Select * from customers; <br></p>
+               
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>AGE</th>
+                            <th>ADDRESS</th>
+                            <th>SALARY</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ramesh</td>
+                            <td>32</td>
+                            <td>Ahmedabad</td>
+                            <td>2500.00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Khilan</td>
+                            <td>25</td>
+                            <td>Delhi</td>
+                            <td>2000.00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Kaushik</td>
+                            <td>23</td>
+                            <td>Kota</td>
+                            <td>2500.00</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Chaitali</td>
+                            <td>25</td>
+                            <td>Mumbai</td>
+                            <td>7000.00</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Hardik</td>
+                            <td>27</td>
+                            <td>Bhopal</td>
+                            <td>9000.00</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Komal</td>
+                            <td>22</td>
+                            <td>MP</td>
+                            <td>5000.00</td>
+                        </tr>
+                    </table>
+                <p>Explicit Cursors<br>
+                    Explicit cursors are programmer-defined cursors for gaining more control over the context area. An explicit cursor should be defined in the declaration section of the PL/SQL Block. It is created on a SELECT Statement which returns more than one row.<br>
+                    <br>
+                    The syntax for creating an explicit cursor is −<br>
+                    <br>
+                    CURSOR cursor_name IS select_statement; <br>
+                    Working with an explicit cursor includes the following steps −<br>
+                    <br>
+                    Declaring the cursor for initializing the memory<br>
+                    Opening the cursor for allocating the memory<br>
+                    Fetching the cursor for retrieving the data<br>
+                    Closing the cursor to release the allocated <br>
+                    Declaring the Cursor<br>
+                    Declaring the cursor defines the cursor with a name and the associated SELECT statement. For example −
+                    <br>
+                    CURSOR c_customers IS <br>
+                       SELECT id, name, address FROM customers; <br>
+                       Opening the Cursor<br>
+                       Opening the cursor allocates the memory for the cursor and makes it ready for fetching the rows returned by the SQL statement into it. For example, we will open the above defined cursor as follows −
+                       <br>
+                       OPEN c_customers; <br>
+                       Fetching the Cursor<br>
+                       Fetching the cursor involves accessing one row at a time. For example, we will fetch rows from the above-opened cursor as follows −<br>
+                       <br>
+                       FETCH c_customers INTO c_id, c_name, c_addr; <br>
+                       Closing the Cursor<br>
+                       Closing the cursor means releasing the allocated memory. For example, we will close the above-opened cursor as follows −<br>
+                       <br>
+                       CLOSE c_customers;<br>
+                       Example<br>
+                       Following is a complete example to illustrate the concepts of explicit cursors &minua;<br>
+                       <br>
+                       DECLARE <br>
+                          c_id customers.id%type; <br>
+                          c_name customers.name%type; <br>
+                          c_addr customers.address%type; <br>
+                          CURSOR c_customers is <br>
+                             SELECT id, name, address FROM customers; <br>
+                       BEGIN <br>
+                          OPEN c_customers; <br>
+                          LOOP <br>
+                          FETCH c_customers into c_id, c_name, c_addr; <br>
+                             EXIT WHEN c_customers%notfound; <br>
+                             dbms_output.put_line(c_id || ' ' || c_name || ' ' || c_addr);<br> 
+                          END LOOP; <br>
+                          CLOSE c_customers; <br>
+                       END; <br>
+                       /<br>
+                       When the above code is executed at the SQL prompt, it produces the following result −<br>
+                       <br>
+                       1 Ramesh Ahmedabad <br> 
+                       2 Khilan Delhi  <br>
+                       3 kaushik Kota     <br>
+                       4 Chaitali Mumbai  <br>
+                       5 Hardik Bhopal   <br>
+                       6 Komal MP  <br>
+                         <br>
+                       PL/SQL procedure successfully completed.<br> </p>
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

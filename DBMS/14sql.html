@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>NULL Values</h1>
+           <p><br><br>
+            The SQL NULL is the term used to represent a missing value. A NULL value in a table is a value in a field that appears to be blank.<br>
+<br>
+A field with a NULL value is a field with no value. It is very important to understand that a NULL value is different than a zero value or a field that contains spaces.<br>
+<br>
+Syntax<br>
+The basic syntax of NULL while creating a table<br>
+<br>
+SQL> CREATE TABLE CUSTOMERS(<br>
+   ID   INT              NOT NULL,<br>
+   NAME VARCHAR (20)     NOT NULL,<br>
+   AGE  INT              NOT NULL,<br>
+   ADDRESS  CHAR (25) ,<br>
+   SALARY   DECIMAL (18, 2),       <br>
+   PRIMARY KEY (ID)<br>
+);<br>
+Here, NOT NULL signifies that column should always accept an explicit value of the given data type. There are two columns where we did not use NOT NULL, which means these columns could be NULL.<br>
+<br>
+A field with a NULL value is the one that has been left blank during the record creation.
+Example<br>
+The NULL value can cause problems when selecting data. However, because when comparing an unknown value to any other value, the result is always unknown and not included in the results. You must use the IS NULL or IS NOT NULL operators to check for a NULL value.<br>
+<br>
+Consider the following CUSTOMERS table having the records as shown below.<br>
+<table>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>AGE</th>
+      <th>ADDRESS</th>
+      <th>SALARY</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Ramesh</td>
+      <td>32</td>
+      <td>Ahmedabad</td>
+      <td>2000.00</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Khilan</td>
+      <td>25</td>
+      <td>Delhi</td>
+      <td>1500.00</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>kaushik</td>
+      <td>23</td>
+      <td>Kota</td>
+      <td>2000.00</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Chaitali</td>
+      <td>25</td>
+      <td>Mumbai</td>
+      <td>6500.00</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Hardik</td>
+      <td>27</td>
+      <td>Bhopal</td>
+      <td>8500.00</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Komal</td>
+      <td>22</td>
+      <td>MP</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Muffy</td>
+      <td>24</td>
+      <td>Indore</td>
+      <td></td>
+    </tr>
+  </table>
+           </p><p>Now, following is the usage of the IS NOT NULLoperator.<br>
+<br>
+            SQL> SELECT  ID, NAME, AGE, ADDRESS, SALARY<br>
+               FROM CUSTOMERS<br>
+               WHERE SALARY IS NOT NULL;<br>
+            This would produce the following result −<br></p>  
+            <table>
+                <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>AGE</th>
+                  <th>ADDRESS</th>
+                  <th>SALARY</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Ramesh</td>
+                  <td>32</td>
+                  <td>Ahmedabad</td>
+                  <td>2000.00</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Khilan</td>
+                  <td>25</td>
+                  <td>Delhi</td>
+                  <td>1500.00</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>kaushik</td>
+                  <td>23</td>
+                  <td>Kota</td>
+                  <td>2000.00</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Chaitali</td>
+                  <td>25</td>
+                  <td>Mumbai</td>
+                  <td>6500.00</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Hardik</td>
+                  <td>27</td>
+                  <td>Bhopal</td>
+                  <td>8500.00</td>
+                </tr>
+              </table>
+<p>Now, following is the usage of the IS NULL operator.<br>
+<br>
+    SQL> SELECT  ID, NAME, AGE, ADDRESS, SALARY<br>
+       FROM CUSTOMERS<br>
+       WHERE SALARY IS NULL;<br>
+    This would produce the following result −<br></p> 
+    <table>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>AGE</th>
+          <th>ADDRESS</th>
+          <th>SALARY</th>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Komal</td>
+          <td>22</td>
+          <td>MP</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Muffy</td>
+          <td>24</td>
+          <td>Indore</td>
+          <td></td>
+        </tr>
+      </table>
+                   
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

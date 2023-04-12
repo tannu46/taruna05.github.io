@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>Operators</h1>
+
+           <p><br>In this chapter, we will discuss operators in PL/SQL. An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulation. PL/SQL language is rich in built-in operators and provides the following types of operators −<br>
+<br>
+            Arithmetic operators<br>
+            Relational operators<br>
+            Comparison operators<br>
+            Logical operators<br>
+            String operators<br>
+            Here, we will understand the arithmetic, relational, comparison and logical operators one by one. The String operators will be discussed in a later chapter − PL/SQL - Strings.<br>
+            <br>
+            <h1>Arithmetic Operators</h1><br><p>
+            Following table shows all the arithmetic operators supported by PL/SQL. Let us assume variable A holds 10 and variable B holds 5, then −<br></p>
+          
+  <table border="1">
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>+</td>
+      <td>Adds two operands</td>
+      <td>A + B will give 15</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>Subtracts second operand from the first</td>
+      <td>A - B will give 5</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>Multiplies both operands</td>
+      <td>A * B will give 50</td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>Divides numerator by denominator</td>
+      <td>A / B will give 2</td>
+    </tr>
+    <tr>
+      <td>**</td>
+      <td>Exponentiation operator, raises one operand to the power of the other</td>
+      <td>A ** B will give 100000</td>
+    </tr>
+  </table>
+<h1>Relational Operators</h1><p><br>
+    Relational operators compare two expressions or values and return a Boolean result. Following table shows all the relational operators supported by PL/SQL. Let us assume variable A holds 10 and variable B holds 20, then −</p><br>
+    
+      <table border="1">
+        <tr>
+          <th>Operator</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+        <tr>
+          <td>=</td>
+          <td>Checks if the values of two operands are equal or not, if yes then condition becomes true.</td>
+          <td>(A = B) is not true.</td>
+        </tr>
+        <tr>
+          <td>!= or &lt;&gt;</td>
+          <td>Checks if the values of two operands are not equal, if yes then condition becomes true.</td>
+          <td>(A != B) is true.</td>
+        </tr>
+        <tr>
+          <td>~=</td>
+          <td>Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</td>
+          <td>(A ~= B) is not true.</td>
+        </tr>
+        <tr>
+          <td>&gt;</td>
+          <td>Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.</td>
+          <td>(A &gt; B) is not true.</td>
+        </tr>
+        <tr>
+          <td>&lt;</td>
+          <td>Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.</td>
+          <td>(A &lt; B) is true.</td>
+        </tr>
+        <tr>
+          <td>&gt;=</td>
+          <td>Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.</td>
+          <td>(A &gt;= B) is not true.</td>
+        </tr>
+        <tr>
+          <td>&lt;=</td>
+          <td>Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.</td>
+          <td>(A &lt;= B) is true.</td>
+        </tr>
+      </table>
+      <h1>Comparison Operators</h1><p><br>
+      Comparison operators are used for comparing one expression to another. The result is always either TRUE, FALSE or NULL.</p><br>
+      
+  <table border="1">
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>LIKE</td>
+      <td>The LIKE operator compares a character, string, or CLOB value to a pattern and returns TRUE if the value matches the pattern and FALSE if it does not.</td>
+      <td>If 'Zara Ali' like 'Z% A_i' returns a Boolean true, whereas, 'Nuha Ali' like 'Z% A_i' returns a Boolean false.</td>
+    </tr>
+    <tr>
+      <td>BETWEEN</td>
+      <td>The BETWEEN operator tests whether a value lies in a specified range. x BETWEEN a AND b means that x >= a and x <= b.</td>
+      <td>If x = 10 then, x between 5 and 20 returns true, x between 5 and 10 returns true, but x between 11 and 20 returns false.</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>The IN operator tests set membership. x IN (set) means that x is equal to any member of set.</td>
+      <td>If x = 'm' then, x in ('a', 'b', 'c') returns Boolean false but x in ('m', 'n', 'o') returns Boolean true.</td>
+    </tr>
+    <tr>
+      <td>IS NULL</td>
+      <td>The IS NULL operator returns the BOOLEAN value TRUE if its operand is NULL or FALSE if it is not NULL. Comparisons involving NULL values always yield NULL.</td>
+      <td>If x = 'm', then 'x is null' returns Boolean false.</td>
+    </tr>
+  </table>
+
+  <h1>Logical Operators</h1><p><br>
+  Following table shows the Logical operators supported by PL/SQL. All these operators work on Boolean operands and produce Boolean results. Let us assume variable A holds true and variable B holds false, then −
+    </p><br>
+   
+  <table border="1">
+    <tr>
+      <th>S.No</th>
+      <th>Data Type & Description</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>CHAR<br>Fixed-length character string with a maximum size of 32,767 bytes</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>VARCHAR2<br>Variable-length character string with a maximum size of 32,767 bytes</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>RAW<br>Variable-length binary or byte string with a maximum size of 32,767 bytes, not interpreted by PL/SQL</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>NCHAR<br>Fixed-length national character string with a maximum size of 32,767 bytes</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>NVARCHAR2<br>Variable-length national character string with a maximum size of 32,767 bytes</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>LONG<br>Variable-length character string with a maximum size of 32,760 bytes</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>LONG RAW<br>Variable-length binary or byte string with a maximum size of 32,760 bytes, not interpreted by PL/SQL</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>ROWID<br>Physical row identifier, the address of a row in an ordinary table</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>UROWID<br>Universal row identifier (physical, logical, or foreign row identifier)</td>
+    </tr>
+  </table>
+
+
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

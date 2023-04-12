@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-image: url("../images/1.jpg");
+            background-position: left 20px;
+            background-repeat: no-repeat;
+            background-size: 300px ;
+            background-color: black;
+            
+        }
+        .div1{
+            margin-left: 290px;
+            padding: 15px;
+            background-color: #06ad68;
+        }
+    </style>
+    <body>
+        <div class="div1">
+           <p>
+               <h1>Hello World!</h1>
+               This example contains some advanced CSS methods you may not have learned yet.
+               But we will expain this methods in a later chapter in the  tutorial.
+           </p>
+        </div>
+    </body>
+</head>
+</html>

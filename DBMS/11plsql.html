@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>Triggers</h1>
+
+           <p><br>we will discuss Triggers in PL/SQL. Triggers are stored programs, which are automatically executed or fired when some events occur. Triggers are, in fact, written to be executed in response to any of the following events −<br>
+<br>
+- A database manipulation (DML) statement (DELETE, INSERT, or UPDATE)<br>
+<br>
+- A database definition (DDL) statement (CREATE, ALTER, or DROP).<br>
+<br>
+- A database operation (SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN).<br>
+<br>
+Triggers can be defined on the table, view, schema, or database with which the event is associated.<br>
+<br>
+Benefits of Triggers<br>
+Triggers can be written for the following purposes −<br>
+<br>
+- Generating some derived column values automatically<br>
+- Enforcing referential integrity<br>
+- Event logging and storing information on table access<br>
+- Auditing<br>
+- Synchronous replication of tables<br>
+- Imposing security authorizations<br>
+- Preventing invalid transactions<br>
+- Creating Triggers<br>
+The syntax for creating a trigger is −<br>
+<br>
+CREATE [OR REPLACE ] TRIGGER trigger_name<br>  
+{BEFORE | AFTER | INSTEAD OF }  <br>
+{INSERT [OR] | UPDATE [OR] | DELETE}  <br>
+[OF col_name]  <br>
+ON table_name  <br>
+[REFERENCING OLD AS o NEW AS n]  <br>
+[FOR EACH ROW]  <br>
+WHEN (condition)   <br>
+DECLARE <br>
+   Declaration-statements <br>
+BEGIN  <br>
+   Executable-statements <br>
+EXCEPTION <br>
+   Exception-handling-statements <br>
+END; <br>
+Where,<br>
+<br>
+CREATE [OR REPLACE] TRIGGER trigger_name − Creates or replaces an existing trigger with the trigger_name.<br>
+<br>
+{BEFORE | AFTER | INSTEAD OF} − This specifies when the trigger will be executed. The INSTEAD OF clause is used for creating trigger on a view.<br>
+<br>
+{INSERT [OR] | UPDATE [OR] | DELETE} − This specifies the DML operation.<br>
+<br>
+[OF col_name] − This specifies the column name that will be updated.<br>
+<br>
+[ON table_name] − This specifies the name of the table associated with the trigger.<br>
+<br>
+[REFERENCING OLD AS o NEW AS n] − This allows you to refer new and old values for various DML statements, such as INSERT, UPDATE, and DELETE.<br>
+<br>
+[FOR EACH ROW] − This specifies a row-level trigger, i.e., the trigger will be executed for each row being affected. Otherwise the trigger will execute just once when the SQL statement is executed, which is called a table level trigger.<br>
+<br>
+WHEN (condition) − This provides a condition for rows for which the trigger would fire. This clause is valid only for row-level triggers.<br>
+<br>
+Example<br>
+To start with, we will be using the CUSTOMERS table we had created and used in the previous chapters −<br>
+<br>
+Select * from customers;  <br>
+<table>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>AGE</th>
+      <th>ADDRESS</th>
+      <th>SALARY</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Ramesh</td>
+      <td>32</td>
+      <td>Ahmedabad</td>
+      <td>2000.00</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Khilan</td>
+      <td>25</td>
+      <td>Delhi</td>
+      <td>1500.00</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Kaushik</td>
+      <td>23</td>
+      <td>Kota</td>
+      <td>2000.00</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Chaitali</td>
+      <td>25</td>
+      <td>Mumbai</td>
+      <td>6500.00</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Hardik</td>
+      <td>27</td>
+      <td>Bhopal</td>
+      <td>8500.00</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Komal</td>
+      <td>22</td>
+      <td>MP</td>
+      <td>4500.00</td>
+    </tr>
+  </table><br>
+           </p><p>The following program creates a row-level trigger for the customers table that would fire for INSERT or UPDATE or DELETE operations performed on the CUSTOMERS table. This trigger will display the salary difference between the old values and new values −<br>
+<br>
+            CREATE OR REPLACE TRIGGER display_salary_changes <br>
+            BEFORE DELETE OR INSERT OR UPDATE ON customers <br>
+            FOR EACH ROW <br>
+            WHEN (NEW.ID > 0) <br>
+            DECLARE <br>
+               sal_diff number; <br>
+            BEGIN <br>
+               sal_diff := :NEW.salary  - :OLD.salary; <br>
+               dbms_output.put_line('Old salary: ' || :OLD.salary); <br>
+               dbms_output.put_line('New salary: ' || :NEW.salary); <br>
+               dbms_output.put_line('Salary difference: ' || sal_diff); <br>
+            END; <br>
+            / <br>
+            When the above code is executed at the SQL prompt, it produces the following result −<br>
+            <br>
+            Trigger created.<br>
+            The following points need to be considered here −<br>
+            <br>
+            OLD and NEW references are not available for table-level triggers, rather you can use them for record-level triggers.<br>
+            <br>
+            If you want to query the table in the same trigger, then you should use the AFTER keyword, because triggers can query the table or change it again only after the initial changes are applied and the table is back in a consistent state.<br>
+            <br>
+            The above trigger has been written in such a way that it will fire before any DELETE or INSERT or UPDATE operation on the table, but you can write your trigger on a single or multiple operations, for example BEFORE DELETE, which will fire whenever a record will be deleted using the DELETE operation on the table.<br>
+            <br>
+            AD<br>
+            Triggering a Trigger<br>
+            Let us perform some DML operations on the CUSTOMERS table. Here is one INSERT statement, which will create a new record in the table −<br>
+            <br>
+            INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) <br>
+            VALUES (7, 'Kriti', 22, 'HP', 7500.00 ); <br>
+            When a record is created in the CUSTOMERS table, the above create trigger, <br>display_salary_changes will be fired and it will display the following result −<br>
+            <br>
+            Old salary: <br>
+            New salary: 7500 <br>
+            Salary difference:<br>
+            Because this is a new record, old salary is not available and the above result comes as null. Let us now perform one more DML operation on the CUSTOMERS table. The UPDATE statement will update an existing record in the table −<br>
+            <br>
+            UPDATE customers <br>
+            SET salary = salary + 500 <br>
+            WHERE id = 2; <br>
+            When a record is updated in the CUSTOMERS table, the above create trigger, display_salary_changes will be fired and it will display the following result −<br>
+            <br>
+            Old salary: 1500 <br>
+            New salary: 2000 <br>
+            Salary difference: 500 <br></p>
+  
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

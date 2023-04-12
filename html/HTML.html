@@ -1,0 +1,126 @@
+<html>
+<head>
+    <title>HTML</title>
+</head>
+<style type="text/css">
+    h1{
+       
+font-weight: lighter;
+font-size: 60px;
+color: #012626;
+margin: 0;
+padding-left: 10px;
+    }
+    p{
+        padding-left: 5px;
+        font-size: 25px;
+        font-weight: lighter;
+        color: #011b1b;
+        margin: 0;
+
+    }
+    *{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body{
+    background:url("/Website/images/Website.jpg") no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.dropdown{
+    margin: 0 auto;
+}
+.dropdown{
+    margin: 0 auto;
+}
+nav{
+    height: 60px;
+    background-color:#005b5d ;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+.logo{
+    width: 140px;
+    display: inline;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 30px;
+}
+nav ul li{
+    background: #005b5b;
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a{
+    display: flex;
+    padding: 0 15px;
+    color:#4cfabb ;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+nav ul li a:hover{
+    background:#013d3d;
+}
+nav ul ul{
+    position: absolute;
+    top: 60px;
+    display: none;
+}
+nav ul li:hover > ul{
+    display: block;
+}
+nav ul ul li{
+    width:150px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+</style>
+<body>
+    <div class="dropdown"></div>
+    <nav>
+        <img src="/Website/images/main0.png" class="logo">
+        <ul>
+            <li><a href="/Website/index.html">Home</a></li>
+            <li><a href="#">Tutorial</a>
+                <ul>
+                    <li><a href="/Website/html/HTML.html">HTML</a></li>
+                    <li><a href="/Website/css/CSS.html">CSS</a></li>
+                    <li><a href="/Website/java/Java Script.html">Java Script</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+        <br>
+        <h1>What is HTML?</h1>
+        <br> <br>
+        <h2></h2>
+        <p>
+            1. HTML stands for Hyper Text Markup Language
+            <br><br>
+            2. HTML is the standard markup language for creating Web pages
+            <br><br>
+            3. HTML describes the structure of a Web page
+            <br><br>
+            4. HTML consists of a series of elements
+            <br><br>
+            5. HTML elements tell the browser how to display the content
+            <br><br>
+            6. HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+        </p>
+</html>

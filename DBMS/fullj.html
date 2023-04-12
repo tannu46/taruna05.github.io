@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>FULL JOIN</h1><br>
+           <p><br><br>The SQL FULL JOIN combines the results of both left and right outer joins.<br>
+<br>
+            The joined table will contain all records from both the tables and fill in NULLs for missing matches on either side.<br>
+            <br>
+            Syntax<br>
+            The basic syntax of a FULL JOIN is as follows −<br>
+            <br>
+            SELECT table1.column1, table2.column2...<br>
+            FROM table1<br>
+            FULL JOIN table2<br>
+            ON table1.common_field = table2.common_field;<br>
+            Here, the given condition could be any given expression based on your requirement.<br>
+            <br>
+            Example<br>
+            Consider the following two tables.<br>
+            <br>
+            Table 1 − CUSTOMERS Table is as follows.<br></p>
+            <table>
+                <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>AGE</th>
+                  <th>ADDRESS</th>
+                  <th>SALARY</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Ramesh</td>
+                  <td>32</td>
+                  <td>Ahmedabad</td>
+                  <td>2000.00</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Khilan</td>
+                  <td>25</td>
+                  <td>Delhi</td>
+                  <td>1500.00</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>kaushik</td>
+                  <td>23</td>
+                  <td>Kota</td>
+                  <td>2000.00</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Chaitali</td>
+                  <td>25</td>
+                  <td>Mumbai</td>
+                  <td>6500.00</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Hardik</td>
+                  <td>27</td>
+                  <td>Bhopal</td>
+                  <td>8500.00</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Komal</td>
+                  <td>22</td>
+                  <td>MP</td>
+                  <td>4500.00</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Muffy</td>
+                  <td>24</td>
+                  <td>Indore</td>
+                  <td>10000.00</td>
+                </tr>
+              </table>
+<p><br>Table 2 − ORDERS Table is as follows.<br></p>   
+<table>
+    <tr>
+      <th>OID</th>
+      <th>DATE</th>
+      <th>CUSTOMER_ID</th>
+      <th>AMOUNT</th>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>2009-10-08 00:00:00</td>
+      <td>3</td>
+      <td>3000</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>2009-10-08 00:00:00</td>
+      <td>3</td>
+      <td>1500</td>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>2009-11-20 00:00:00</td>
+      <td>2</td>
+      <td>1560</td>
+    </tr>
+    <tr>
+      <td>103</td>
+      <td>2008-05-20 00:00:00</td>
+      <td>4</td>
+      <td>2060</td>
+    </tr>
+  </table>
+<p>Now, let us join these two tables using FULL JOIN as follows.<br>
+<br>
+    SQL> SELECT  ID, NAME, AMOUNT, DATE<br>
+       FROM CUSTOMERS<br>
+       FULL JOIN ORDERS<br>
+       ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;<br>
+    This would produce the following result −<br></p> 
+    <table>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>AMOUNT</th>
+          <th>DATE</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Ramesh</td>
+          <td>NULL</td>
+          <td>NULL</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Khilan</td>
+          <td>1560</td>
+          <td>2009-11-20 00:00:00</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>kaushik</td>
+          <td>3000</td>
+          <td>2009-10-08 00:00:00</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>kaushik</td>
+          <td>1500</td>
+          <td>2009-10-08 00:00:00</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Chaitali</td>
+          <td>2060</td>
+          <td>2008-05-20 00:00:00</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Hardik</td>
+          <td>NULL</td>
+          <td>NULL</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Komal</td>
+          <td>NULL</td>
+          <td>NULL</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Muffy</td>
+          <td>NULL</td>
+          <td>NULL</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>kaushik</td>
+          <td>3000</td>
+          <td>2009-10-08 00:00:00</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>kaushik</td>
+          <td>1500</td>
+          <td>2009-10-08 00:00:00</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Khilan</td>
+          <td>1560</td>
+          <td>2009-11-20 00:00:00</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Chaitali</td>
+          <td>2060</td>
+          <td>2008-05-20 00:00:00</td>
+        </tr>
+      </table><br>
+<p>If your Database does not support FULL JOIN (MySQL does not support FULL JOIN), then you can use UNION ALL clause to combine these two JOINS as shown below.<br>
+<br>
+    SQL> SELECT  ID, NAME, AMOUNT, DATE<br>
+       FROM CUSTOMERS<br>
+       LEFT JOIN ORDERS<br>
+       ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID<br>
+    UNION ALL<br>
+       SELECT  ID, NAME, AMOUNT, DATE<br>
+       FROM CUSTOMERS<br>
+       RIGHT JOIN ORDERS<br>
+       ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID<br></p>       
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

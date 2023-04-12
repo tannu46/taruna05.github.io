@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Program 17 JS</title>
+    </head>
+    <script>
+            var x=parseFloat(prompt("enter a number"));
+            if ((x%3==0)||(x%7==0)){
+                document.write("true")
+            }
+            else{
+                document.write("false")
+            }
+    </script>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>Loops</h1>
+
+           <p><br> we will discuss Loops in PL/SQL. There may be a situation when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.<br>
+
+            Programming languages provide various control structures that allow for more complicated execution paths.<br>
+<br>
+            A loop statement allows us to execute a statement or group of statements multiple times and following is the general form of a loop statement in most of the programming languages −<br>
+            PL/SQL provides the following types of loop to handle the looping requirements. Click the following links to check their detail.<br>
+           
+  <table border="1">
+    <tr>
+      <th>S.No</th>
+      <th>Loop Type & Description</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>PL/SQL Basic LOOP<br>In this loop structure, a sequence of statements is enclosed between the LOOP and the END LOOP statements. At each iteration, the sequence of statements is executed and then control resumes at the top of the loop.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PL/SQL WHILE LOOP<br>Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>PL/SQL FOR LOOP<br>Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Nested loops in PL/SQL<br>You can use one or more loops inside any other basic loop, while, or for loop.</td>
+    </tr>
+  </table>
+           </p><p>Labeling a PL/SQL Loop<br>
+            PL/SQL loops can be labeled. The label should be enclosed by double angle brackets (<< and >>) and appear at the beginning of the LOOP statement. The label name can also appear at the end of the LOOP statement. You may use the label in the EXIT statement to exit from the loop.<br>
+            <br>
+            The following program illustrates the concept −<br>
+            <br>
+            DECLARE <br>
+               i number(1); <br>
+               j number(1); <br>
+            BEGIN <br>
+               << outer_loop >> <br>
+               FOR i IN 1..3 LOOP <br>
+                  << inner_loop >> <br>
+                  FOR j IN 1..3 LOOP <br>
+                     dbms_output.put_line('i is: '|| i || ' and j is: ' || j); <br>
+                  END loop inner_loop; <br>
+               END loop outer_loop; <br>
+            END; <br>
+            /<br>
+            When the above code is executed at the SQL prompt, it produces the following result −<br>
+            <br>
+            i is: 1 and j is: 1 <br>
+            i is: 1 and j is: 2 <br>
+            i is: 1 and j is: 3 <br>
+            i is: 2 and j is: 1 <br>
+            i is: 2 and j is: 2 <br>
+            i is: 2 and j is: 3 <br>
+            i is: 3 and j is: 1 <br>
+            i is: 3 and j is: 2 <br>
+            i is: 3 and j is: 3  <br>
+            <br>
+            PL/SQL procedure successfully completed. The Loop Control Statements
+            Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.<br>
+            <br>
+            PL/SQL supports the following control statements. Labeling loops also help in taking the control outside a loop. Click the following links to check their details.</p><br>
+   
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Control Statement & Description</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>EXIT statement<br>The Exit statement completes the loop and control passes to the statement immediately after the END LOOP.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>CONTINUE statement<br>Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>GOTO statement<br>Transfers control to the labeled statement. Though it is not advised to use the GOTO statement in your program.</td>
+        </tr>
+    </table>
+
+
+
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

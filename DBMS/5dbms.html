@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+   
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1> DBMS ARCHITECTURE</h1>
+        <p><BR><BR>
+            The DBMS design depends upon its architecture. The basic client/server architecture is used to deal with a large number of PCs, web servers, database servers and other components that are connected with networks.
+            The client/server architecture consists of many PCs and a workstation which are connected via the network.
+            DBMS architecture depends upon how users are connected to the database to get their request done.<BR><BR></p>
+                <h1>Types of DBMS Architecture</h1><p><BR>
+                    Database architecture can be seen as a single tier or multi-tier. But logically, database architecture is of two types like: 2-tier architecture and 3-tier architecture.<br><br>
+                    
+                    1-Tier Architecture<br>
+                    -In this architecture, the database is directly available to the user. It means the user can directly sit on the DBMS and uses it.<br>
+                    -Any changes done here will directly be done on the database itself. It doesn't provide a handy tool for end users.<br>
+                    -The 1-Tier architecture is used for development of the local application, where programmers can directly communicate with the database for the quick response. <br><br>
+                    
+                    2-Tier Architecture<br>
+-The 2-Tier architecture is same as basic client-server. In the two-tier architecture, applications on the client end can directly communicate with the database at the server side. For this interaction, API's like: ODBC, JDBC are used.<br>
+-The user interfaces and application programs are run on the client-side.<br>
+-The server side is responsible to provide the functionalities like: query processing and transaction management.<br>
+-To communicate with the DBMS, client-side application establishes a connection with the server side.<br><br>
+
+3-Tier Architecture<br>
+-The 3-Tier architecture contains another layer between the client and server. In this architecture, client can't directly communicate with the server.
+-The application on the client-end interacts with an application server which further communicates with the database system.<br>
+-End user has no idea about the existence of the database beyond the application server. The database also has no idea about any other user beyond the application.<br>
+-The 3-Tier architecture is used in case of large web application.<br><br>
+        </p>
+<h1>Three schema Architecture</h1><p>
+The three schema architecture is also called ANSI/SPARC architecture or three-level architecture.
+This framework is used to describe the structure of a specific database system.
+The three schema architecture is also used to separate the user applications and physical database.
+The three schema architecture contains three-levels. It breaks the database down into three different categories.<br><br>
+
+
+1. Internal Level:<br><br>
+-The internal level has an internal schema which describes the physical storage structure of the database.<br>
+-The internal schema is also known as a physical schema.<br>
+-It uses the physical data model. It is used to define that how the data will be stored in a block.<br>
+-The physical level is used to describe complex low-level data structures in detail.<br>
+<br>The internal level is generally is concerned with the following activities:<br>
+
+-Storage space allocations.<br>
+-For Example: B-Trees, Hashing etc.<br>
+-Access paths.
+For Example: Specification of primary and secondary keys, indexes, pointers and sequencing.<br>
+-Data compression and encryption techniques.<br>
+-Optimization of internal structures.<br>
+-Representation of stored fields.<br>
+<br><br>
+2. Conceptual Level:<br><br>
+-The conceptual schema describes the design of a database at the conceptual level. Conceptual level is also known as logical level.<br>
+-The conceptual schema describes the structure of the whole database.<br>
+-The conceptual level describes what data are to be stored in the database and also describes what relationship exists among those data.<br>
+-In the conceptual level, internal details such as an implementation of the data structure are hidden.<br>
+-Programmers and database administrators work at this level.<br>
+<br><br>
+3. External Level<br><br>
+-At the external level, a database contains several schemas that sometimes called as subschema. The subschema is used to describe the different view of the database.<br>
+-An external schema is also known as view schema.<br>
+-Each view schema describes the database part that a particular user group is interested and hides the remaining database from that user group.<br>
+-The view schema describes the end user interaction with database systems.<br>
+        </p><br><br>
+       <h1> Mapping between Views</h1><p><br>
+
+The three levels of DBMS architecture don't exist independently of each other. There must be correspondence between the three levels i.e. how they actually correspond with each other. DBMS is responsible for correspondence between the three types of schema. This correspondence is called Mapping.<br><br>
+
+There are basically two types of mapping in the database architecture:<br>
+
+
+Conceptual/ Internal Mapping<br>
+External / Conceptual Mapping<br>
+Conceptual/ Internal Mapping<br>
+
+<br>The Conceptual/ Internal Mapping lies between the conceptual level and the internal level. Its role is to define the correspondence between the records and fields of the conceptual level and files and data structures of the internal level.<br>
+
+<br>External/ Conceptual Mapping<br>
+
+The external/Conceptual Mapping lies between the external level and the Conceptual level. Its role is to define the correspondence between a particular external and the conceptual view.<br></p><br>
+<h1> Data Independence</h1><p><br><br>
+Data independence can be explained using the three-schema architecture.
+Data independence refers characteristic of being able to modify the schema at one level of the database system without altering the schema at the next higher level.<br><br>
+There are two types of data independence:<br><br>
+1. Logical Data Independence<br>
+-Logical data independence refers characteristic of being able to change the conceptual schema without having to change the external schema.<br>
+-Logical data independence is used to separate the external level from the conceptual view.<br>
+-If we do any changes in the conceptual view of the data, then the user view of the data would not be affected.<br>
+-Logical data independence occurs at the user interface level.<br><br>
+2. Physical Data Independence<br>
+-Physical data independence can be defined as the capacity to change the internal schema without having to change the conceptual schema.<br>
+-If we do any changes in the storage size of the database system server, then the Conceptual structure of the database will not be affected.<br>
+-Physical data independence is used to separate conceptual levels from the internal levels.<br>
+-Physical data independence occurs at the logical interface level.<br>
+</body>
+</html>

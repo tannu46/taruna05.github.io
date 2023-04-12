@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>CREATE Database</h1>
+           <p><br><br>The SQL CREATE DATABASE statement is used to create a new SQL database. If you are creating your database on Linux or Unix, then database names are case-sensitive though SQL keywords are case-insensitive. If you are working on Windows then this restriction does not apply.<br>
+
+            Syntax<br>
+            The basic syntax of this CREATE DATABASE statement is as follows −<br>
+            <br>
+            CREATE DATABASE DatabaseName;<br>
+            Always the database name should be unique within the RDBMS.<br>
+            <br>
+            While creating a database, you may encounter an error such as ERROR 1044 (42000): Access denied for user 'krishna'@'localhost' to database 'DatabaseName', this means that you do not have the necessary privileges to create a database.<br>
+            Example<br>
+            If you want to create a new database <testDB>, then the CREATE DATABASE statement would be as shown below −<br>
+            <br>
+            SQL> CREATE DATABASE testDB;<br>
+            Make sure you have the necessary privilege before creating any database. Once a database is created, you can check it in the list of databases as follows −<br>
+            <br>
+            SQL> SHOW DATABASES;<br>
+    
+    <table>
+        <tr>
+            <th>Database</th>
+        </tr>
+        <tr>
+            <td>information_schema</td>
+        </tr>
+        <tr>
+            <td>AMROOD</td>
+        </tr>
+        <tr>
+            <td>TUTORIALSPOINT</td>
+        </tr>
+        <tr>
+            <td>mysql</td>
+        </tr>
+        <tr>
+            <td>orig</td>
+        </tr>
+        <tr>
+            <td>test</td>
+        </tr>
+        <tr>
+            <td>testDB</td>
+        </tr>
+    </table></p><br>
+<p>7 rows in set (0.00 sec)<br>
+    Once you have created a database, you can use it using the SQL USE statement as shown below:<br>
+    
+    SQL> USER testDB;<br>
+    Database changed<br></p>
+
+   
+            
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

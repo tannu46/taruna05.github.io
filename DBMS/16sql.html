@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br><BR>
+           <h1>Using Joins</h1><br>
+           <p><br><br>The SQL Joins clause is used to combine records from two or more tables in a database. A JOIN is a means for combining fields from two tables by using values common to each.<BR>
+<BR>
+            Consider the following two tables −<BR>
+            <BR>
+            Table 1 − CUSTOMERS Table<BR>
+                <table>
+                    <tr>
+                      <th>ID</th>
+                      <th>NAME</th>
+                      <th>AGE</th>
+                      <th>ADDRESS</th>
+                      <th>SALARY</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Ramesh</td>
+                      <td>32</td>
+                      <td>Ahmedabad</td>
+                      <td>2000.00</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Khilan</td>
+                      <td>25</td>
+                      <td>Delhi</td>
+                      <td>1500.00</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>kaushik</td>
+                      <td>23</td>
+                      <td>Kota</td>
+                      <td>2000.00</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Chaitali</td>
+                      <td>25</td>
+                      <td>Mumbai</td>
+                      <td>6500.00</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Hardik</td>
+                      <td>27</td>
+                      <td>Bhopal</td>
+                      <td>8500.00</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Komal</td>
+                      <td>22</td>
+                      <td>MP</td>
+                      <td>4500.00</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Muffy</td>
+                      <td>24</td>
+                      <td>Indore</td>
+                      <td>10000.00</td>
+                    </tr>
+                  </table>
+<P><BR>Table 2 − ORDERS Table<BR></P>       
+    <table>
+        <tr>
+          <th>OID</th>
+          <th>DATE</th>
+          <th>CUSTOMER_ID</th>
+          <th>AMOUNT</th>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>2009-10-08 00:00:00</td>
+          <td>3</td>
+          <td>3000</td>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>2009-10-08 00:00:00</td>
+          <td>3</td>
+          <td>1500</td>
+        </tr>
+        <tr>
+          <td>101</td>
+          <td>2009-11-20 00:00:00</td>
+          <td>2</td>
+          <td>1560</td>
+        </tr>
+        <tr>
+          <td>103</td>
+          <td>2008-05-20 00:00:00</td>
+          <td>4</td>
+          <td>2060</td>
+        </tr>
+      </table>
+<P><BR>Now, let us join these two tables in our SELECT statement as shown below.<BR>
+<BR>
+    SQL> SELECT ID, NAME, AGE, AMOUNT<BR>
+       FROM CUSTOMERS, ORDERS<BR>
+       WHERE  CUSTOMERS.ID = ORDERS.CUSTOMER_ID;<BR>
+    This would produce the following result.<BR>
+        <table>
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>AGE</th>
+              <th>AMOUNT</th>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>kaushik</td>
+              <td>23</td>
+              <td>3000</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>kaushik</td>
+              <td>23</td>
+              <td>1500</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Khilan</td>
+              <td>25</td>
+              <td>1560</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Chaitali</td>
+              <td>25</td>
+              <td>2060</td>
+            </tr>
+          </table>
+        <p><br>  <br>Here, it is noticeable that the join is performed in the WHERE clause. Several operators can be used to join tables, such as =, <, >, <>, <=, >=, !=, BETWEEN, LIKE, and NOT; they can all be used to join tables. However, the most common operator is the equal to symbol.<br>
+<br>
+There are different types of joins available in SQL −<br>
+<br>
+INNER JOIN − returns rows when there is a match in both tables.<br>
+<br>
+LEFT JOIN − returns all rows from the left table, even if there are no matches in the right table.<br>
+<br>
+RIGHT JOIN − returns all rows from the right table, even if there are no matches in the left table.<br>
+<br>
+FULL JOIN − returns rows when there is a match in one of the tables.<br>
+<br>
+SELF JOIN − is used to join a table to itself as if the table were two tables, temporarily renaming at least one table in the SQL statement.<br>
+<br>
+CARTESIAN JOIN − returns the Cartesian product of the sets of records from the two or more joined tables.<br>
+<br>
+Let us now discuss each of these joins in detail.<br>
+    </P> <br> 
+    <b>1. INNER JOIN</b><br>
+                <a href="innerj.html"> <input type="button" value="OPEN"></a></a><br><br>       
+                <b>2. LEFT JOIN</b><br>
+                <a href="leftj.html"> <input type="button" value="OPEN"></a></a><br><br>               
+                <b>3. RIGHT JOIN</b><br>
+                <a href="rightj.html"> <input type="button" value="OPEN"></a></a><br><br>   
+                <b>4. FULL JOIN</b><br>
+                <a href="fullj.html"> <input type="button" value="OPEN"></a></a><br><br>   
+                <b>5. SELF JOIN</b><br>
+                <a href="selfj.html"> <input type="button" value="OPEN"></a></a><br><br>   
+                <b>6. CARTESIAN  JOIN</b><br>
+                <a href="cartesianj.html"> <input type="button" value="OPEN"></a></a><br><br>   
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

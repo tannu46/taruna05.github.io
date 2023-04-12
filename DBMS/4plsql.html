@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>Variables</h1>
+
+           <p><br>
+         we will discuss Variables in Pl/SQL. A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in PL/SQL has a specific data type, which determines the size and the layout of the variable's memory; the range of values that can be stored within that memory and the set of operations that can be applied to the variable.<BR>
+<BR>
+The name of a PL/SQL variable consists of a letter optionally followed by more letters, numerals, dollar signs, underscores, and number signs and should not exceed 30 characters. By default, variable names are not case-sensitive. You cannot use a reserved PL/SQL keyword as a variable name.<BR>
+<BR>
+PL/SQL programming language allows to define various types of variables, such as date time data types, records, collections, etc. which we will cover in subsequent chapters. For this chapter, let us study only basic variable types.<BR>
+<BR>
+<h1> Declaration in PL/SQL</h1><BR><P>
+PL/SQL variables must be declared in the declaration section or in a package as a global variable. When you declare a variable, PL/SQL allocates memory for the variable's value and the storage location is identified by the variable name.<BR>
+<BR>
+The syntax for declaring a variable is −<BR>
+<BR>
+variable_name [CONSTANT] datatype [NOT NULL] [:= | DEFAULT initial_value] <BR>
+Where, variable_name is a valid identifier in PL/SQL, datatype must be a valid PL/SQL data type or any user defined data type which we already have discussed in the last chapter. <BR>Some valid variable declarations along with their definition are shown below −<BR>
+<BR>
+sales number(10, 2); <BR>
+pi CONSTANT double precision := 3.1415; <BR>
+name varchar2(25); <BR>
+address varchar2(100);<BR>
+When you provide a size, scale or precision limit with the data type, it is called a constrained declaration. Constrained declarations require less memory than unconstrained declarations. For example −<BR>
+<BR>
+sales number(10, 2); <BR>
+name varchar2(25); <BR>
+address varchar2(100); <BR>
+<BR></P>
+<h1><Initializing Variables in PLsql </h1><BR><p>
+Whenever you declare a variable, PL/SQL assigns it a default value of NULL. If you want to initialize a variable with a value other than the NULL value, you can do so during the declaration, using either of the following −<BR>
+<BR>
+The DEFAULT keyword<BR>
+<BR>
+The assignment operator<BR>
+<BR>
+For example −<BR>
+<BR>
+counter binary_integer := 0; <BR>
+greetings varchar2(20) DEFAULT 'Have a Good Day';<BR>
+You can also specify that a variable should not have a NULL value using the NOT NULL constraint. If you use the NOT NULL constraint, you must explicitly assign an initial value for that variable.<BR>
+<BR>
+It is a good programming practice to initialize variables properly otherwise, sometimes programs would produce unexpected results. Try the following example which makes use of various types of variables −<BR>
+<BR>
+DECLARE <BR>
+   a integer := 10; <BR>
+   b integer := 20; <BR>
+   c integer; <BR>
+   f real; <BR>
+BEGIN <BR>
+   c := a + b; <BR>
+   dbms_output.put_line('Value of c: ' || c); <BR>
+   f := 70.0/3.0; <BR>
+   dbms_output.put_line('Value of f: ' || f); <BR>
+END; <BR>
+/  <BR>
+When the above code is executed, it produces the following result −<BR>
+<BR>
+Value of c: 30 <BR>
+Value of f: 23.333333333333333333  <BR>
+<BR>
+PL/SQL procedure successfully completed. <BR>
+Variable Scope in PL/SQL<BR>
+PL/SQL allows the nesting of blocks, i.e., each program block may contain another inner block. If a variable is declared within an inner block, it is not accessible to the outer block. However, if a variable is declared and accessible to an outer block, it is also accessible to all nested inner blocks. There are two types of variable scope −<BR>
+<BR>
+Local variables − Variables declared in an inner block and not accessible to outer blocks.<BR>
+<BR>
+Global variables − Variables declared in the outermost block or a package.<BR>
+<BR>
+Following example shows the usage of Local and Global variables in its simple form −
+<BR>
+DECLARE <BR>
+   -- Global variables  <BR>
+   num1 number := 95;  <BR>
+   num2 number := 85;  <BR>
+BEGIN  <BR>
+   dbms_output.put_line('Outer Variable num1: ' || num1); <BR>
+   dbms_output.put_line('Outer Variable num2: ' || num2); <BR>
+   DECLARE  <BR>
+      -- Local variables <BR>
+      num1 number := 195;  <BR>
+      num2 number := 185;  <BR>
+   BEGIN  <BR>
+      dbms_output.put_line('Inner Variable num1: ' || num1); <BR>
+      dbms_output.put_line('Inner Variable num2: ' || num2); <BR>
+   END;  <BR>
+END; <BR>
+/ <BR>
+When the above code is executed, it produces the following result −<BR>
+<BR>
+Outer Variable num1: 95 <BR>
+Outer Variable num2: 85 <BR>
+Inner Variable num1: 195 <BR>
+Inner Variable num2: 185  <BR>
+<BR>
+PL/SQL procedure successfully completed. <BR></p>
+<BR>
+<h1>Assigning SQL Query Results to PL/SQL Variables</h1><BR><p>
+You can use the SELECT INTO statement of SQL to assign values to PL/SQL variables. For each item in the SELECT list, there must be a corresponding, type-compatible variable in the INTO list. The following example illustrates the concept. Let us create a table named CUSTOMERS −<BR>
+
+(For SQL statements, please refer to the SQL tutorial)<BR>
+CREATE TABLE CUSTOMERS( <BR>
+   ID   INT NOT NULL, <BR>
+   NAME VARCHAR (20) NOT NULL, <BR>
+   AGE INT NOT NULL, <BR>
+   ADDRESS CHAR (25), <BR>
+   SALARY   DECIMAL (18, 2),   <BR>     
+   PRIMARY KEY (ID) <BR>
+);  <BR>
+Table Created  <BR>
+Let us now insert some values in the table −<BR>
+<BR>
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) <BR>
+VALUES (1, 'Ramesh', 32, 'Ahmedabad', 2000.00 );  <BR>
+<BR>
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) <BR>
+VALUES (2, 'Khilan', 25, 'Delhi', 1500.00 );  <BR>
+<BR>
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) <BR>
+VALUES (3, 'kaushik', 23, 'Kota', 2000.00 );<BR>
+  <BR>
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) <BR>
+VALUES (4, 'Chaitali', 25, 'Mumbai', 6500.00 ); <BR>
+ <BR>
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) <BR>
+VALUES (5, 'Hardik', 27, 'Bhopal', 8500.00 );  <BR>
+<BR>
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) <BR>
+VALUES (6, 'Komal', 22, 'MP', 4500.00 ); <BR>
+The following program assigns values from the above table to PL/SQL variables using the SELECT INTO clause of SQL −<BR>
+<BR>
+DECLARE <BR>
+   c_id customers.id%type := 1; <BR>
+   c_name  customers.name%type; <BR>
+   c_addr customers.address%type; <BR>
+   c_sal  customers.salary%type; <BR>
+BEGIN <BR>
+   SELECT name, address, salary INTO c_name, c_addr, c_sal <BR>
+   FROM customers <BR>
+   WHERE id = c_id;  <BR>
+   dbms_output.put_line <BR>
+   ('Customer ' ||c_name || ' from ' || c_addr || ' earns ' || c_sal); <BR>
+END; <BR>
+/  <BR>
+When the above code is executed, it produces the following result −<BR>
+<BR>
+Customer Ramesh from Ahmedabad earns 2000  <BR>
+PL/SQL procedure completed successfully<BR></p>
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

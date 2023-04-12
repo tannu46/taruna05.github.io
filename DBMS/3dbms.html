@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+   
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>Types to DBMS</h1>
+        <p><br><br>
+            Types of DBMS<br><br>
+            The types of DBMS based on data model are as follows -<br>
+            
+            1.Relational database.<br>
+            
+            2.Object oriented database.<br>
+            
+           3. Hierarchical database.<br>
+            
+            4.Network database.<br>
+            <br><br>
+           1. Relation Database<br>
+           <br> A relational database management system (RDBMS) is a system where data is organized in two-dimensional tables using rows and columns.<br>
+            
+            This is one of the most popular data models which is used in industries. It is based on SQL.<br>
+            
+            Every table in a database has a key field which uniquely identifies each record.
+            <br>
+            This type of system is the most widely used DBMS.<br>
+            
+            Relational database management system software is available for personal computers, workstation and large mainframe systems.<br>
+            
+            For example - Oracle Database, MySQL, Microsoft SQL Server etc.<br>
+
+           2. Object Oriented Database<br>
+<br>It is a system where information or data is represented in the form of objects which is used in object-oriented programming.<br>
+
+It is a combination of relational database concepts and object-oriented principles.<br>
+
+Relational database concepts are concurrency control, transactions, etc.<br>
+
+OOPs principles are data encapsulation, inheritance, and polymorphism.
+<br>
+It requires less code and is easy to maintain.<br>
+
+For example - Object DB software.<br>
+<br>
+3.Hierarchical Database<br>
+It is a system where the data elements have a one to many relationship (1: N). Here data is organized like a tree which is similar to a folder structure in your computer system.
+<br>
+The hierarchy starts from the root node, connecting all the child nodes to the parent node.
+<br>
+It is used in industry on mainframe platforms.<br>
+<br>
+For example- IMS(IBM), Windows registry (Microsoft).<br>
+<br>
+4.Network database<br>
+<br>A Network database management system is a system where the data elements maintain one to one relationship (1: 1) or many to many relationship (N: N).
+<br>
+It also has a hierarchical structure, but the data is organized like a graph and it is allowed to have more than one parent for one child record.<br>
+        </p>
+</body>
+</html>

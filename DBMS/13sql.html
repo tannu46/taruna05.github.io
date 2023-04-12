@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>Sub Queries</h1>
+           <p><br>
+            A Subquery or Inner query or a Nested query is a query within another SQL query and embedded within the WHERE clause.<br>
+<br>
+            A subquery is used to return data that will be used in the main query as a condition to further restrict the data to be retrieved.<br>
+            <br>
+            Subqueries can be used with the SELECT, INSERT, UPDATE, and DELETE statements along with the operators like =, <, >, >=, <=, IN, BETWEEN, etc.<br>
+            <br>
+            There are a few rules that subqueries must follow −<br>
+            <br>
+            1.Subqueries must be enclosed within parentheses.<br>
+            <br>
+            2.A subquery can have only one column in the SELECT clause, unless multiple columns are in the main query for the subquery to compare its selected columns.<br>
+            <br>
+            3.An ORDER BY command cannot be used in a subquery, although the main query can use an ORDER BY. The GROUP BY command can be used to perform the same function as the ORDER BY in a subquery.<br>
+            <br>
+            4.Subqueries that return more than one row can only be used with multiple value operators such as the IN operator.<br>
+            <br>
+            5.The SELECT list cannot include any references to values that evaluate to a BLOB, ARRAY, CLOB, or NCLOB.<br>
+            <br>
+            6.A subquery cannot be immediately enclosed in a set function.<br>
+            <br>
+            7.The BETWEEN operator cannot be used with a subquery. However, the BETWEEN operator can be used within the subquery.<br>
+            <br>
+            Subqueries with the SELECT Statement<br>
+            Subqueries are most frequently used with the SELECT statement. The basic syntax is as follows −<br>
+            <br>
+            SELECT column_name [, column_name ]<br>
+            FROM   table1 [, table2 ]<br>
+            WHERE  column_name OPERATOR<br>
+               (SELECT column_name [, column_name ]<br>
+               FROM table1 [, table2 ]<br>
+               [WHERE])<br>
+            Example<br>
+            Consider the CUSTOMERS table having the following records −<br>
+            <table>
+                <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>AGE</th>
+                  <th>ADDRESS</th>
+                  <th>SALARY</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Ramesh</td>
+                  <td>35</td>
+                  <td>Ahmedabad</td>
+                  <td>2000.00</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Khilan</td>
+                  <td>25</td>
+                  <td>Delhi</td>
+                  <td>1500.00</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>kaushik</td>
+                  <td>23</td>
+                  <td>Kota</td>
+                  <td>2000.00</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Chaitali</td>
+                  <td>25</td>
+                  <td>Mumbai</td>
+                  <td>6500.00</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Hardik</td>
+                  <td>27</td>
+                  <td>Bhopal</td>
+                  <td>8500.00</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Komal</td>
+                  <td>22</td>
+                  <td>MP</td>
+                  <td>4500.00</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Muffy</td>
+                  <td>24</td>
+                  <td>Indore</td>
+                  <td>10000.00</td>
+                </tr>
+              </table>
+           </p><p>Now, let us check the following subquery with a SELECT statement.<br>
+<br>
+            SQL> SELECT * <br>
+               FROM CUSTOMERS <br>
+               WHERE ID IN (SELECT ID <br>
+                     FROM CUSTOMERS <br>
+                     WHERE SALARY > 4500) ;<br>
+            This would produce the following result.<br></p>
+            <table>
+                <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>AGE</th>
+                  <th>ADDRESS</th>
+                  <th>SALARY</th>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Chaitali</td>
+                  <td>25</td>
+                  <td>Mumbai</td>
+                  <td>6500.00</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Hardik</td>
+                  <td>27</td>
+                  <td>Bhopal</td>
+                  <td>8500.00</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Muffy</td>
+                  <td>24</td>
+                  <td>Indore</td>
+                  <td>10000.00</td>
+                </tr>
+              </table>
+              <p>Subqueries with the INSERT Statement<br>
+                Subqueries also can be used with INSERT statements. The INSERT statement uses the data returned from the subquery to insert into another table. The selected data in the subquery can be modified with any of the character, date or number functions.<br>
+                <br>
+                The basic syntax is as follows.<br>
+                <br>
+                INSERT INTO table_name [ (column1 [, column2 ]) ]<br>
+                   SELECT [ *|column1 [, column2 ]<br>
+                   FROM table1 [, table2 ]<br>
+                   [ WHERE VALUE OPERATOR ]<br>
+                Example<br>
+                Consider a table CUSTOMERS_BKP with similar structure as CUSTOMERS table. Now to copy the complete CUSTOMERS table into the CUSTOMERS_BKP table, you can use the following syntax.<br>
+                <br>
+                SQL> INSERT INTO CUSTOMERS_BKP<br>
+                   SELECT * FROM CUSTOMERS <br>
+                   WHERE ID IN (SELECT ID <br>
+                   FROM CUSTOMERS) ;<br>
+                Subqueries with the UPDATE Statement<br>
+                The subquery can be used in conjunction with the UPDATE statement. Either single or multiple columns in a table can be updated when using a subquery with the UPDATE statement.<br>
+                <br>
+                The basic syntax is as follows.<br>
+                <br>
+                UPDATE table<br>
+                SET column_name = new_value<br>
+                [ WHERE OPERATOR [ VALUE ]<br>
+                   (SELECT COLUMN_NAME<br>
+                   FROM TABLE_NAME)<br>
+                   [ WHERE ]<br>
+                Example<br>
+                Assuming, we have CUSTOMERS_BKP table available which is backup of CUSTOMERS table. The following example updates SALARY by 0.25 times in the CUSTOMERS table for all the customers whose AGE is greater than or equal to 27.<br>
+                <br>
+                SQL> UPDATE CUSTOMERS<br>
+                   SET SALARY = SALARY * 0.25<br>
+                   WHERE AGE IN (SELECT AGE FROM CUSTOMERS_BKP<br>
+                      WHERE AGE >= 27 );<br>
+                This would impact two rows and finally CUSTOMERS table would have the following records.</p><br>
+                <table>
+                    <tr>
+                      <th>ID</th>
+                      <th>NAME</th>
+                      <th>AGE</th>
+                      <th>ADDRESS</th>
+                      <th>SALARY</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Ramesh</td>
+                      <td>35</td>
+                      <td>Ahmedabad</td>
+                      <td>125.00</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Khilan</td>
+                      <td>25</td>
+                      <td>Delhi</td>
+                      <td>1500.00</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>kaushik</td>
+                      <td>23</td>
+                      <td>Kota</td>
+                      <td>2000.00</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Chaitali</td>
+                      <td>25</td>
+                      <td>Mumbai</td>
+                      <td>6500.00</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Hardik</td>
+                      <td>27</td>
+                      <td>Bhopal</td>
+                      <td>2125.00</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Komal</td>
+                      <td>22</td>
+                      <td>MP</td>
+                      <td>4500.00</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Muffy</td>
+                      <td>24</td>
+                      <td>Indore</td>
+                      <td>10000.00</td>
+                    </tr>
+                  </table>
+                  <p>Subqueries with the DELETE Statement<br>
+The subquery can be used in conjunction with the DELETE statement like with any other statements mentioned above.<br>
+<br>
+The basic syntax is as follows.<br>
+<br>
+DELETE FROM TABLE_NAME<br>
+[ WHERE OPERATOR [ VALUE ]<br>
+   (SELECT COLUMN_NAME<br>
+   FROM TABLE_NAME)<br>
+   [ WHERE ]<br>
+Example<br>
+Assuming, we have a CUSTOMERS_BKP table available which is a backup of the CUSTOMERS table. The following example deletes the records from the CUSTOMERS table for all the customers whose AGE is greater than or equal to 27.<br>
+<br>
+SQL> DELETE FROM CUSTOMERS<br>
+   WHERE AGE IN (SELECT AGE FROM CUSTOMERS_BKP<br>
+      WHERE AGE >= 27 );<br>
+This would impact two rows and finally the CUSTOMERS table would have the following records.<br></p>
+<table>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>AGE</th>
+      <th>ADDRESS</th>
+      <th>SALARY</th>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Khilan</td>
+      <td>25</td>
+      <td>Delhi</td>
+      <td>1500.00</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>kaushik</td>
+      <td>23</td>
+      <td>Kota</td>
+      <td>2000.00</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Chaitali</td>
+      <td>25</td>
+      <td>Mumbai</td>
+      <td>6500.00</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Komal</td>
+      <td>22</td>
+      <td>MP</td>
+      <td>4500.00</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Muffy</td>
+      <td>24</td>
+      <td>Indore</td>
+      <td>10000.00</td>
+    </tr>
+  </table>
+  
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

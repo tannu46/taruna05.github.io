@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Program 16 JS</title></head>
+<script>
+    var x=parseFloat(prompt("enter first number"));
+    var y=parseFloat(prompt("enter second number"));
+    if(x==y){
+        document.write(3*(x+y))
+    }
+    else{
+        document.write(x+y)
+    }
+   
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+     table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        th {
+            background-color:black;
+        
+        }
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>DATA TYPES in SQL</h1>
+           <p><br>
+            Each column in a database table is required to have a name and a data type.
+<br>
+An SQL developer must decide what type of data that will be stored inside each column when creating a table. The data type is a guideline for SQL to understand what type of data is expected inside of each column, and it also identifies how SQL will interact with the stored data.<br><br>
+
+
+    <table>
+        <tr>
+            <th>Data Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>CHAR(size)</td>
+            <td>A FIXED length string (can contain letters, numbers, and special characters). The size parameter specifies the column length in characters - can be from 0 to 255. Default is 1</td>
+        </tr>
+        <tr>
+            <td>VARCHAR(size)</td>
+            <td>A VARIABLE length string (can contain letters, numbers, and special characters). The size parameter specifies the maximum string length in characters - can be from 0 to 65535</td>
+        </tr>
+        <tr>
+            <td>BINARY(size)</td>
+            <td>Equal to CHAR(), but stores binary byte strings. The size parameter specifies the column length in bytes. Default is 1</td>
+        </tr>
+        <tr>
+            <td>VARBINARY(size)</td>
+            <td>Equal to VARCHAR(), but stores binary byte strings. The size parameter specifies the maximum column length in bytes.</td>
+        </tr>
+        <tr>
+            <td>TINYBLOB</td>
+            <td>For BLOBs (Binary Large Objects). Max length: 255 bytes</td>
+        </tr>
+        <tr>
+            <td>TINYTEXT</td>
+            <td>Holds a string with a maximum length of 255 characters</td>
+        </tr>
+        <tr>
+            <td>TEXT(size)</td>
+            <td>Holds a string with a maximum length of 65,535 bytes</td>
+        </tr>
+        <tr>
+            <td>BLOB(size)</td>
+            <td>For BLOBs (Binary Large Objects). Holds up to 65,535 bytes of data</td>
+        </tr>
+        <tr>
+            <td>MEDIUMTEXT</td>
+            <td>Holds a string with a maximum length of 16,777,215 characters</td>
+        </tr>
+        <tr>
+            <td>MEDIUMBLOB</td>
+            <td>For BLOBs (Binary Large Objects). Holds up to 16,777,215 bytes of data</td>
+        </tr>
+        <tr>
+            <td>LONGTEXT</td>
+            <td>Holds a string with a maximum length of 4,294,967,295 characters</td>
+        </tr>
+        <tr>
+            <td>LONGBLOB</td>
+            <td>For BLOBs (Binary Large Objects). Holds up to 4,294,967,295 bytes of data</td>
+        </tr>
+        <tr>
+            <td>ENUM(val1, val2, val3, ...)</td>
+            <td>A string object that can have only one value, chosen from a list of possible values. You can list up to
+            </td>
+        </tr>
+        <tr>
+        <td>SET(val1, val2, val3, ...)</td>
+        <td>A string object that can have zero or more values, chosen from a list of possible values. You can list up to 64 values in the SET definition.</td>
+        </tr>
+        <tr>
+        <td>BOOL, BOOLEAN</td>
+        <td>Stores boolean values (true/false or 1/0)</td>
+        </tr>
+        <tr>
+        <td>INT(size)</td>
+        <td>A signed integer with a maximum display width of size digits</td>
+        </tr>
+        <tr>
+        <td>UNSIGNED INT(size)</td>
+        <td>An unsigned integer with a maximum display width of size digits</td>
+        </tr>
+        <tr>
+            <td>FLOAT(p, d)</td>
+            <td>A floating-point number that can store approximate numeric values. The total number of digits is specified by p, and the number of digits after the decimal point is specified by d</td>
+            </tr>
+            <tr>
+            <td>DOUBLE(p, d)</td>
+            <td>A double-precision floating-point number that can store approximate numeric values. The total number of digits is specified by p, and the number of digits after the decimal point is specified by d</td>
+            </tr>
+            <tr>
+            <td>DECIMAL(p, d)</td>
+            <td>An exact numeric value with a fixed number of digits before and after the decimal point. The total number of digits is specified by p, and the number of digits after the decimal point is specified by d</td>
+            </tr>
+            <tr>
+            <td>DATE</td>
+            <td>A date value in the format 'YYYY-MM-DD'</td>
+            </tr>
+            <tr>
+            <td>DATETIME</td>
+            <td>A date and time value in the format 'YYYY-MM-DD HH:MI:SS'</td>
+            </tr>
+            <tr>
+            <td>TIMESTAMP</td>
+            <td>A timestamp value in the format 'YYYY-MM-DD HH:MI:SS'</td>
+            </tr>
+            <tr>
+            <td>TIME</td>
+            <td>A time value in the format 'HH:MI:SS'</td>
+            </tr>
+            <tr>
+            <td>YEAR</td>
+            <td>A year value in the format 'YYYY'</td>
+            </tr>
+            <tr>
+            <td>BIT(size)</td>
+            <td>A bit field with a maximum of size bits</td>
+            </tr>
+            </table>
+            
+            </body>
+            </html>
+           
+            
+            
+            
+            
+            
+            

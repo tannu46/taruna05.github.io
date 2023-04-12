@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<style>
+   
+h1{
+       
+       font-weight: lighter;
+       font-size: 60px;
+       color: yellow;
+       margin: 0;
+       padding-left: 10px;
+           }
+           p{
+               padding-left: 5px;
+               font-size: 30px;
+               font-weight: lighter;
+               color: white;
+               margin: 0;
+       
+           }
+           h2{
+                font-weight: lighter;
+               font-size: 40px;
+               color: yellow;
+               margin: 0;
+               padding-left: 10px;
+   
+           }
+           b{
+               font-weight: lighter;
+               font-size: 25px;
+               color:white;
+               margin: 0;
+               padding-left: 10px;
+           }
+           *{
+   
+      margin: 0;
+     
+      padding: 0;
+     
+      box-sizing: border-box;
+     
+     }
+     
+     
+     
+     .dropdown{
+     
+         margin: 0 auto;
+         background-image: linear-gradient(to top, #5b09b5, #5505c3, #4d02d2, #3e02e1, #2305f0);
+         background-position: center center;
+         -webkit-background-size: cover ;
+         background-size: cover;
+         background-attachment: fixed;
+         height: 800vh;
+         /* position: fixed; */
+     
+     }
+     
+     nav{
+     
+         height: 65px;
+     
+         background-color:#0a9395 ;
+     
+         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+         text-align:justify;
+         font-size: 30px;
+        
+     }
+     
+     .logo{
+      width: 4rem;
+      float: left;
+      margin-top:2em ;
+      clip-path: circle(45.4% at 50% 50%);
+        
+         width: 70px;
+     
+         display: inline;
+     
+         margin-top: -5px;
+     
+         margin-left: 10px;
+        
+     }
+     
+     nav ul{
+     
+         padding: 0;
+     
+         margin: 0;
+     
+         float: right;
+     
+         margin-right: 25px;
+     
+     }
+     
+     nav ul li{
+      background:#0a9395  ;
+         
+     
+         position: relative;
+     
+         list-style: none;
+     
+         display: inline-block;
+     
+     }
+     
+     nav ul li a{
+     
+         display: flex;
+     
+         padding: 0 15px;
+     
+         color:black;
+     
+         text-decoration: none;
+     
+         line-height: 65px;
+     
+         font-size: 25px;
+     
+         justify-content: space-between;
+     
+         align-items: center;
+     
+         text-align: center;
+     
+     }
+     
+     nav ul li a:hover{
+     
+         background:#0c5454;
+     
+     }
+     
+     nav ul ul{
+     
+         position: absolute;
+     
+         top: 60px;
+     
+         display: none;
+     
+     }
+     
+     nav ul li:hover > ul{
+     
+         display: block;
+     
+     }
+     
+     nav ul ul li{
+     
+         width:150px;
+     
+         float: none;
+     
+         display: list-item;
+     
+         position: relative;
+     
+     }
+   
+    
+    </style>
+    <body>
+   
+       <div class="dropdown">
+           <nav>
+               <img src="../images/main0.jpg" class="logo"><a>ASCODERS</a>
+               <ul>
+                   <li><a href="../index.html">Home</a></li>
+                   <li><a href="#">Tutorial</a>
+                       <ul>
+                           <li><a href="../HTML.html">HTML</a></li>
+                           <li><a href="../CSS.html">CSS</a></li>
+                           <li><a href="../Java Script.html">Java Script</a></li>
+                            <li><a href="../dbms.html">DBMS</a></li>
+                           <li><a href="../sql.html">SQL</a></li>
+                           <li><a href="../plsql.html">PL/SQL</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact Us</a></li>
+               </ul>
+           </nav><br>
+           <h1>History of DBMS</h1>
+        <p>
+           <br><br> A database management system (DBMS) allows a person to organize, store, and retrieve data from a computer. It is a way of communicating with a computer’s “stored memory.” In the very early years of computers, “punch cards” were used for input, output, and data storage. Punch cards offered a fast way to enter data and retrieve it. Herman Hollerith is given credit for adapting the punch cards used for weaving looms to act as the memory for a mechanical tabulating machine, in 1890. Much later, databases came along.
+<br><br>
+
+Databases (or DBs) have played a very important part in the recent evolution of computers. The first computer programs were developed in the early 1950s and focused almost completely on coding languages and algorithms. At the time, computers were basically giant calculators and data (names, phone numbers) was considered the leftovers of processing information. Computers were just starting to become commercially available, and when business people started using them for real-world purposes, this leftover data suddenly became important.<br><br>
+A database, as a collection of information, can be organized so a database management system can access and pull specific information. In 1960, Charles W. Bachman designed the integrated database system, the “first” DBMS. IBM, not wanting to be left out, created a database system of its own, known as IMS. Both database systems are described as the forerunners of navigational databases.<br><br>
+By the mid-1960s, as computers developed speed and flexibility, and started becoming popular, many kinds of general-use database systems became available. As a result, customers demanded a standard be developed, in turn leading to Bachman forming the Database Task Group. This group took responsibility for the design and standardization of a language called Common Business Oriented Language (COBOL). The Database Task Group presented this standard in 1971, which also came to be known as the “CODASYL approach.”
+<br><br>
+The CODASYL approach was a very complicated system and required substantial training. It depended on a “manual” navigation technique using a linked data set, which formed a large network. Searching for records could be accomplished by one of three techniques:
+<br><br>
+Using the primary key (also known as the CALC key)
+Moving relationships (also called sets) from one record to another
+Scanning all records in sequential order
+Eventually, the CODASYL approach lost its popularity as simpler, easier-to-work-with systems came on the market.
+<br><br>
+Edgar Codd worked for IBM in the development of hard disk systems, and he was not happy with the lack of a search engine in the CODASYL approach, and the IMS model. He wrote a series of papers, in 1970, outlining novel ways to construct databases. His ideas eventually evolved into a paper titled A Relational Model of Data for Large Shared Data Banks, which described a new method for storing data and processing large databases. Records would not be stored in a free-form list of linked records, as in CODASYL navigational model, but instead used a “table with fixed-length records.”
+<br><br>
+IBM had invested heavily in the IMS model and wasn’t terribly interested in Codd’s ideas. Fortunately, some people who didn’t work for IBM were interested. In 1973, Michael Stonebraker and Eugene Wong (both then at UC Berkeley) made the decision to research relational database systems. The project was called INGRES (Interactive Graphics and Retrieval System) and successfully demonstrated a relational model could be efficient and practical. INGRES worked with a query language known as QUEL, in turn, pressuring IBM to develop SQL in 1974, which was more advanced (SQL became ANSI and OSI standards in 1986 and 1987). SQL quickly replaced QUEL as the more functional query language.
+<br><br>
+RDBM Systems were an efficient way to store and process structured data. Then, processing speeds got faster, and “unstructured” data (art, photographs, music, etc.) became much more commonplace. Unstructured data is both non-relational and schema-less, and relational database management systems simply were not designed to handle this kind of data.
+<br><br>
+MySQL<br><br>
+In 1995, David Axmark, Allan Larsson, and Michael Widenius launched MySQL, an open-sourced relational database management system (RDBMS) that is based on structured query language. According to a Stack Overflow survey in 2020, MySQL is being used by 55.6% of the survey participants, making it the most popular database in the world.
+<br>
+MySQL has evolved into an extremely scalable database system with the ability to operate on multiple platforms. Some key features of MySQL follow:
+<br>
+1.MySQL is very easy to deploy and use.<br>
+2.MySQL supports ACID (atomicity, consistency, isolation, durability), making it extremely reliable.<br>
+3.It is a relational database management system that has fast-loading utilities.<br>
+4.It can be configured using any programming language (PHP is the most popular).<br>
+5.It offers good security using solid data security layers and allows only authorized users to access the database with encrypted passwords.<br>
+<br>
+        </p>
+</body>
+</html>

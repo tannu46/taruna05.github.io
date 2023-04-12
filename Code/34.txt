@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+          .c1{
+              position: relative;
+              border: 5px solid green;
+              height:500px;
+            width:700px;
+            font-size: 18px;
+            padding: 10px;
+            box-sizing: border-box;
+          }
+          .c2{
+              position: absolute;
+              height:300px;
+            width:500px;
+            font-size: 18px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 5px solid green;
+            position:absolute;
+            top:150px;
+            left: 180px;
+        }
+    </style>
+    <body>
+       <h2>position:absolute;</h2>
+       <p>An element with position:absolute;is positioned relative to the to the nearest
+            position ancestor(instead of positioned relative to the viewport,like fixed):</p>
+        <div class="c1">
+               this div element has position:relative;
+               <div class="c2">
+                   this div element has position:absolute;
+               </div>
+        </div>
+    </body>
+</head>
+</html>
